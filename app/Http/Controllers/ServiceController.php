@@ -66,7 +66,6 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         $service = Service::create($request->post());
-        dd($service);
         return response()->json([
             'message' => 'Rating submitted Successfully',
             'service' => $service
